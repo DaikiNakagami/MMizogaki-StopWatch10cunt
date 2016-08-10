@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CFC4A2B1C7232BD00B8886D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC4A2A1C7232BD00B8886D /* AppDelegate.swift */; };
+		5CFC4A2D1C7232BD00B8886D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC4A2C1C7232BD00B8886D /* ViewController.swift */; };
+		5CFC4A301C7232BD00B8886D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC4A2E1C7232BD00B8886D /* Main.storyboard */; };
+		5CFC4A321C7232BD00B8886D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC4A311C7232BD00B8886D /* Assets.xcassets */; };
+		5CFC4A351C7232BD00B8886D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC4A331C7232BD00B8886D /* LaunchScreen.storyboard */; };
+		5CFC4A3D1C723FC300B8886D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFC4A3C1C723FC300B8886D /* CoreMotion.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		5CFC4A3F1C72688C00B8886D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFC4A3E1C72688C00B8886D /* AudioToolbox.framework */; };
+		5CFC4A431C726F9A00B8886D /* succes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC4A421C726F9A00B8886D /* succes.mp3 */; };
+		5CFC4A451C726FA100B8886D /* Failure.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC4A441C726FA100B8886D /* Failure.mp3 */; };
+		5CFC4A471C726FDF00B8886D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFC4A461C726FDF00B8886D /* AVFoundation.framework */; };
+		9CA7D5AB1C7706B000AC73FE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA7D5AA1C7706B000AC73FE /* Social.framework */; };
+		9CA7D5AD1C770B5400AC73FE /* ELITES.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA7D5AC1C770B5400AC73FE /* ELITES.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5CFC4A271C7232BD00B8886D /* StopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CFC4A2A1C7232BD00B8886D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5CFC4A2C1C7232BD00B8886D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5CFC4A2F1C7232BD00B8886D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5CFC4A311C7232BD00B8886D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5CFC4A341C7232BD00B8886D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5CFC4A361C7232BD00B8886D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CFC4A3C1C723FC300B8886D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		5CFC4A3E1C72688C00B8886D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5CFC4A421C726F9A00B8886D /* succes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = succes.mp3; sourceTree = "<group>"; };
+		5CFC4A441C726FA100B8886D /* Failure.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Failure.mp3; sourceTree = "<group>"; };
+		5CFC4A461C726FDF00B8886D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9CA7D5AA1C7706B000AC73FE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9CA7D5AC1C770B5400AC73FE /* ELITES.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ELITES.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CFC4A241C7232BD00B8886D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA7D5AB1C7706B000AC73FE /* Social.framework in Frameworks */,
+				5CFC4A471C726FDF00B8886D /* AVFoundation.framework in Frameworks */,
+				5CFC4A3F1C72688C00B8886D /* AudioToolbox.framework in Frameworks */,
+				5CFC4A3D1C723FC300B8886D /* CoreMotion.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CFC4A1E1C7232BD00B8886D = {
+			isa = PBXGroup;
+			children = (
+				5CFC4A411C726F8E00B8886D /* Resouce */,
+				5CFC4A401C726F7B00B8886D /* Framework */,
+				5CFC4A291C7232BD00B8886D /* StopWatch */,
+				5CFC4A281C7232BD00B8886D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5CFC4A281C7232BD00B8886D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CFC4A271C7232BD00B8886D /* StopWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CFC4A291C7232BD00B8886D /* StopWatch */ = {
+			isa = PBXGroup;
+			children = (
+				5CFC4A2A1C7232BD00B8886D /* AppDelegate.swift */,
+				5CFC4A2C1C7232BD00B8886D /* ViewController.swift */,
+				5CFC4A2E1C7232BD00B8886D /* Main.storyboard */,
+				5CFC4A311C7232BD00B8886D /* Assets.xcassets */,
+				5CFC4A331C7232BD00B8886D /* LaunchScreen.storyboard */,
+				5CFC4A361C7232BD00B8886D /* Info.plist */,
+			);
+			path = StopWatch;
+			sourceTree = "<group>";
+		};
+		5CFC4A401C726F7B00B8886D /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				9CA7D5AA1C7706B000AC73FE /* Social.framework */,
+				5CFC4A461C726FDF00B8886D /* AVFoundation.framework */,
+				5CFC4A3E1C72688C00B8886D /* AudioToolbox.framework */,
+				5CFC4A3C1C723FC300B8886D /* CoreMotion.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		5CFC4A411C726F8E00B8886D /* Resouce */ = {
+			isa = PBXGroup;
+			children = (
+				9CA7D5AC1C770B5400AC73FE /* ELITES.png */,
+				5CFC4A441C726FA100B8886D /* Failure.mp3 */,
+				5CFC4A421C726F9A00B8886D /* succes.mp3 */,
+			);
+			name = Resouce;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CFC4A261C7232BD00B8886D /* StopWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CFC4A391C7232BD00B8886D /* Build configuration list for PBXNativeTarget "StopWatch" */;
+			buildPhases = (
+				5CFC4A231C7232BD00B8886D /* Sources */,
+				5CFC4A241C7232BD00B8886D /* Frameworks */,
+				5CFC4A251C7232BD00B8886D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StopWatch;
+			productName = StopWatch;
+			productReference = 5CFC4A271C7232BD00B8886D /* StopWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CFC4A1F1C7232BD00B8886D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Voice;
+				TargetAttributes = {
+					5CFC4A261C7232BD00B8886D = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = E8K7V8Y3M8;
+					};
+				};
+			};
+			buildConfigurationList = 5CFC4A221C7232BD00B8886D /* Build configuration list for PBXProject "StopWatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5CFC4A1E1C7232BD00B8886D;
+			productRefGroup = 5CFC4A281C7232BD00B8886D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CFC4A261C7232BD00B8886D /* StopWatch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CFC4A251C7232BD00B8886D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CFC4A351C7232BD00B8886D /* LaunchScreen.storyboard in Resources */,
+				5CFC4A321C7232BD00B8886D /* Assets.xcassets in Resources */,
+				5CFC4A431C726F9A00B8886D /* succes.mp3 in Resources */,
+				5CFC4A451C726FA100B8886D /* Failure.mp3 in Resources */,
+				5CFC4A301C7232BD00B8886D /* Main.storyboard in Resources */,
+				9CA7D5AD1C770B5400AC73FE /* ELITES.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CFC4A231C7232BD00B8886D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CFC4A2D1C7232BD00B8886D /* ViewController.swift in Sources */,
+				5CFC4A2B1C7232BD00B8886D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5CFC4A2E1C7232BD00B8886D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CFC4A2F1C7232BD00B8886D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5CFC4A331C7232BD00B8886D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CFC4A341C7232BD00B8886D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5CFC4A371C7232BD00B8886D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		5CFC4A381C7232BD00B8886D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CFC4A3A1C7232BD00B8886D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StopWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "github.com-MMasahito.StopWatch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5CFC4A3B1C7232BD00B8886D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StopWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "github.com-MMasahito.StopWatch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CFC4A221C7232BD00B8886D /* Build configuration list for PBXProject "StopWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CFC4A371C7232BD00B8886D /* Debug */,
+				5CFC4A381C7232BD00B8886D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CFC4A391C7232BD00B8886D /* Build configuration list for PBXNativeTarget "StopWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CFC4A3A1C7232BD00B8886D /* Debug */,
+				5CFC4A3B1C7232BD00B8886D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CFC4A1F1C7232BD00B8886D /* Project object */;
+}
