@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var gameLabel: UILabel!
     @IBOutlet var timerLabel: UILabel!
-    var timer: NSTimer!
+    var timer: Timer!
     var count: Float = 0
     var motionManager:CMMotionManager! = CMMotionManager()
     var audioPlayer = AVAudioPlayer()
@@ -25,12 +25,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let application: UIApplication = UIApplication.sharedApplication()
-        application.idleTimerDisabled = true
+        let application: UIApplication = UIApplication.shared
+        application.isIdleTimerDisabled = true
         
         
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "time:", userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(ViewController.time(_:)), userInfo: nil, repeats: true)
         timer.invalidate()
         
         
@@ -40,14 +40,14 @@ class ViewController: UIViewController {
             let weakSelf = self
             if Float(data!.acceleration.z) >= 0.8 {
                 
-                if weakSelf.timer.valid == false {
+                if weakSelf.timer.isValid == false {
                     
-                    weakSelf.timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: weakSelf, selector: "time:", userInfo: nil, repeats: true)
+                    weakSelf.timer = Timer.scheduledTimer(timeInterval: 0.01, target: weakSelf, selector: #selector(ViewController.time(_:)), userInfo: nil, repeats: true)
                     print(weakSelf.timer)
                 }
                 
             }else {
-                if weakSelf.timer.valid == true {
+                if weakSelf.timer.isValid == true {
                     
                     weakSelf.timer.invalidate()
                     
@@ -55,9 +55,9 @@ class ViewController: UIViewController {
                         
                         weakSelf.gameLabel.text = "success"
                         
-                        let titleSound = NSURL(fileURLWithPath:NSBundle.mainBundle().pathForResource("succes",ofType:"mp3")!)
+                        let titleSound = URL(fileURLWithPath:Bundle.main.path(forResource: "succes",ofType:"mp3")!)
                         do {
-                            weakSelf.audioPlayer = try AVAudioPlayer(contentsOfURL: titleSound, fileTypeHint: nil)
+                            weakSelf.audioPlayer = try AVAudioPlayer(contentsOf: titleSound, fileTypeHint: nil)
                         } catch {
                             print("Error")
                         }
@@ -68,20 +68,20 @@ class ViewController: UIViewController {
                 }
             }
             
-        }
-        motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler:handler)
+        } as! CMAccelerometerHandler
+        motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler:handler)
     }
     
-    func time(timer: NSTimer) {
+    func time(_ timer: Timer) {
         
         count += 0.01
         timerLabel.text = NSString(format:"Timer:%0.2f",count) as String
         
         if count >= 10.0 {
             
-            let titleSound = NSURL(fileURLWithPath:NSBundle.mainBundle().pathForResource("Failure",ofType:"mp3")!)
+            let titleSound = URL(fileURLWithPath:Bundle.main.path(forResource: "Failure",ofType:"mp3")!)
             do {
-                self.audioPlayer = try AVAudioPlayer(contentsOfURL: titleSound, fileTypeHint: nil)
+                self.audioPlayer = try AVAudioPlayer(contentsOf: titleSound, fileTypeHint: nil)
             } catch {
                 print("Error")
             }
@@ -96,7 +96,7 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func clean(sender: AnyObject) {
+    @IBAction func clean(_ sender: AnyObject) {
         
         timer.invalidate()
         count = 0.00
@@ -105,22 +105,22 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func twitterButton(sender: AnyObject) {
+    @IBAction func twitterButton(_ sender: AnyObject) {
         
         let postView:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
         postView.setInitialText(NSString(format:"ELITESで、自由を手に入れよう\nあなたの記録は%@です",timerLabel.text!) as String)
-        postView.addImage(UIImage(named:"ELITES"))
-        postView.addURL(NSURL(string:"http://elite.sc/"))
-        self.presentViewController(postView, animated: true, completion: nil)
+        postView.add(UIImage(named:"ELITES"))
+        postView.add(URL(string:"http://elite.sc/"))
+        self.present(postView, animated: true, completion: nil)
         
     }
-    @IBAction func facebookButton(sender: AnyObject) {
+    @IBAction func facebookButton(_ sender: AnyObject) {
         
         let postView:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
          postView.setInitialText(NSString(format:"ELITESで、自由を手に入れよう\nあなたの記録は%@です",timerLabel.text!) as String)
-        postView.addImage(UIImage(named:"ELITES"))
-        postView.addURL(NSURL(string:"http://elite.sc/"))
-        self.presentViewController(postView, animated: true, completion: nil)
+        postView.add(UIImage(named:"ELITES"))
+        postView.add(URL(string:"http://elite.sc/"))
+        self.present(postView, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
